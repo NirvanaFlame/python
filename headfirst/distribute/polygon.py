@@ -10,30 +10,23 @@ print(movies[1])
 movies.append("annymals")
 movies.extend(["bana", "list"])
 
-print(movies)
-
-movies.pop(3)
-
-print(movies)
-
-movies.remove("list")
-
-print(movies)
-
 print("--------------------------------")
 
 
-def print_lol(movies, level):
-    for movie in movies:
-        if isinstance(movie, list):
-            print_lol(movie)
+def print_lol(items, level=0, ident=False):
+    for item in items:
+        if isinstance(item, list):
+            print_lol(item, level+1, ident)
         else:
-            for tab_stop in range(level):
-                print("\t", end='')
-            print(movie)
+            if ident:
+                for tab_stop in range(level):
+                    # end - switches off print() Bif automatic
+                    # inclusion of a new-line on output
+                    print("\t", end='')
+            print(item)
 
 
-print_lol(movies, 2)
+print_lol(movies, 0)
 
 print("--------------------------------")
 
