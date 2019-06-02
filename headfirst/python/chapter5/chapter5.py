@@ -33,32 +33,7 @@ def sanitize(time_string):
 
     return(mins + '.' + secs)
 
-def print_sorted(dirty_list):
-    result = [sanitize(item) for item in dirty_list]
-    return print(sorted(result))
-
-clean_james = []
-clean_julie = []
-clean_mikey = []
-clean_sarah = []
-
-
-
-print_sorted(james)
-print_sorted(julie)
-print_sorted(mikey)
-print_sorted(sarah)
-
-# for time in james:
-#     clean_james.append(sanitize(time))
-# for time in julie:
-#     clean_julie.append(sanitize(time))
-# for time in mikey:
-#     clean_mikey.append(sanitize(time))
-# for time in sarah:
-#     clean_sarah.append(sanitize(time))
-
-# print(sorted(clean_james))
-# print(sorted(clean_julie))
-# print(sorted(clean_mikey))
-# print(sorted(clean_sarah))
+print(sorted([sanitize(item) for item in james]))
+print(sorted([sanitize(item) for item in julie]))
+print(sorted([sanitize(item) for item in mikey]))
+print(sorted([sanitize(item) for item in sarah]))
