@@ -1,4 +1,4 @@
-
+#! /usr/local/bin/python3
 from http.server import HTTPServer, CGIHTTPRequestHandler
 
 port = 8080
